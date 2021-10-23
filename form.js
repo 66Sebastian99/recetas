@@ -10,11 +10,20 @@ $("#contact-submit").click(() => {
         celu: document.getElementById("celu").value,
         mensaje: document.getElementById("msj").value,
     }
-    console.log(estado);
-    console.log(respuesta);
     $.post(URLPOST, infoPost ,(respuesta, estado) => {
+        console.log(estado);
+        console.log(respuesta);
         if(estado === "success"){
-            $("body").append(`<div>Guardado:${respuesta.infoPost.nombre}</div>`);
+            $("body").append(
+            `<div class="container mensajeEnviado md-col-6">
+                <h3 class="tituloConfirma" >Mensaje enviado</h2>
+                <ul class="enviadoResumen">
+                    <li>Nombre: ${respuesta.nombre}</li>
+                    <li>Mail: ${respuesta.email}</li>
+                    <li>Celu: ${respuesta.celu}</li>
+                    <li class="mensajeResumen">Mensaje: ${respuesta.mensaje}</li>
+                </ul>
+            </div>`);
         }  
     });
 });
