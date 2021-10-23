@@ -44,24 +44,24 @@
 	</div>
 	<div class="row justify-content-around flowContacto">
 		<div class="container formulario md-col-6">  
-			<form id="contact" action="" method="post">
+			<form id="contact" action="" method="POST">
 		
 				<h3>Sugerencias</h3>
 		
 				<fieldset>
-					<input placeholder="Nombre y Apellido" type="text" tabindex="1" required autofocus>
+					<input id="nombre" placeholder="Nombre y Apellido" type="text" tabindex="1" required autofocus>
 				</fieldset>
 				
 				<fieldset>
-					<input placeholder="Email" type="email" tabindex="2" required>
+					<input id="email" placeholder="Email" type="email" tabindex="2" required>
 				</fieldset>
 		
 				<fieldset>
-					<input placeholder="Celular" type="tel" tabindex="3" required>
+					<input id="celu" placeholder="Celular (opcional)" type="tel" tabindex="3">
 				</fieldset>
 		
 				<fieldset>
-					<textarea placeholder="Mensaje..." tabindex="5" required></textarea>
+					<textarea id="mensaje" placeholder="Mensaje..." tabindex="5" required></textarea>
 				</fieldset>
 		
 				<fieldset>
@@ -78,8 +78,8 @@
 	<footer class="site-footer"> <!-- Inicio footer -->
 	</footer>
 
-	<script src="/form.js"></script>
-	<script src="../bootstrap/js/jquery-3.5.1.slim.min.js"></script>
-    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+	<script src="../form.js"></script>
 </body>
 </html>
