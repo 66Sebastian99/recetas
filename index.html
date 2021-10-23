@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Encontrá tu receta</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1 class="tituloHead"><a href="#">Encontrá tu receta</a></h1>
+            <nav>
+                <a href="#">Inicio</a>
+                <a href="#">¿Como funciona?</a>
+            </nav>
+        </div>
+    </header>
+
+    <div>
+        <h2 class="titulo_principal">¿Qué vamos a cocinar?<h2>
+    </div>   
+
+    <div class="instrucciones">
+        <p>Presioná <span>Comenzar</span> y elegí los ingredientes que vas a queres usar en la receta.</p>
+        <p>Automáticamente vas ver las recetas compatibles con esos ingredientes.</p>
+    </div>
+
+<!--<div class="boton_comenzar">
+        <button id="comenzar" title="comenzar" value="comenzar" class="boton_principal" onclick="eligecajon()">Elegí ingredientes</button>
+        <button id="comenzar" title="comenzar" value="comenzar" class="boton_principal" onclick="main()">Cargá tu receta</button>
+    </div>
+
+    <div>
+        <button id="comenzar" title="comenzar" value="comenzar" class="boton_principal" onclick="main()">Cargá tu receta</button>
+    </div> -->
+
+    <div class="boton_comenzar">
+        <button id="comenzar2" title="comenzar" value="comenzar" class="boton_principal">Comenzar</button>
+    </div>
+
+    <div id="busqueda" style="display:none;">
+        <h3 class="sitio_subtitulo">Seleccioná el ingrediente principal de tu receta</h3>
+
+        <div id="ingredientes" class="ingredientes_flex"></div>
+
+        <div id="resultados"></div>
+        
+    </div>
+
+    
+    <!-- <div>
+        <div id="cajones" class="cajon_visible">
+            <h3 class="cajon_subtitulo">Elegí los vegetales, carnes o especias que tengas disponibles. <span class="nofunciona">Combinalos como quieras.</span></h3>
+            <div class="cajon_flex">
+                <button title="cajon_vegetales" class="cajon_vegetales cajon" onclick="eligevegetal()" id="cajon_vegetal"></button>
+                <button title="cajon_carnes" class="cajon_carnes cajon" onclick="" id="cajon_carnes"></button>
+                <button title="cajon_especias" class="cajon_especias cajon" onclick="" id="cajon_especias">Especias</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="vege_caja">
+        <h3 class="cajon_subtitulo">Elegí que vegetal queres que incluya tu receta</h3>
+        <div class="ingredientes_flex">
+            <button title="lechuga" id="lechuga" value="lechuga" class="vegetal vegetal_lechuga" onclick="buscaReceta(event)"></button>
+            <button title="papa" id="papa" class="vegetal vegetal_papa" onclick="buscaReceta(event)"></button>
+            <button title="zicchini" id="zucchini" class="vegetal vegetal_zucchini" onclick="buscaReceta(event)"></button>
+        </div>
+    </div>
+
+    <div id="carne_caja">
+        <button title="cerdo" id="cerdo" class="carne carne_cerdo" onclick="buscaReceta(event)"></button>
+        <button title="pescado" id="pescado" value="pescado" class="carne carne_pescado" onclick="buscaReceta(event)"></button>
+        <button title="pollo" id="pollo" value="pollo" class="carne carne_pollo" onclick="buscaReceta(event)"></button>
+        <button title="vaca" id="vaca" class="carne carne_vaca" onclick="buscaReceta(event)"></button>
+    </div> -->
+
+    <div id="recetadinamica">
+
+        
+    </div>
+
+    <!-- <div id="carne_horno" class="receta">
+        <h1 class="receta_titulo">Carne al horno</h1>
+        <h3 class="receta_subtitulo">Preparacion:</h3>
+        <ol class="pasos">
+            <li>Se limpia bien la cola de cuadril tratando de no dejar ningún resto de grasa. 
+                Mecharla con la provenzal hecha del ajo y el perejil bien picado y colocala en una placa para horno moderado a fuerte con un poco de aceite, sal y pimienta.</li>
+            <li>Cuando la carne comienza a tomar color se la da vuelta y se colocan las papas trozadas medianas en la placa y se lleva nuevamente al horno</li>
+            <li>Las verduras varias se pueden agregarse a la provenzal finamente picados</li>
+            <li>Se sirve cuando las papas estén blandas y la carne bien cocida</li>
+        </ol>
+    </div>
+
+    <div id="ensalada_caesar" class="receta">
+        <div class="encabezado_receta">
+            <h1 class="receta_titulo">Ensalada Caesar</h1>
+            <button class="btn-fav" data-receta=${receta.nombre}>💖</button>
+        </div>
+        <h3 class="receta_subtitulo">Ingredientes:</h3>
+        <h5 class="receta_subtitulo2">Para 2 personas</h5>
+        <ul class="ingredientes">
+            <li>1 pechuga de pollo.</li>
+            <li>1 planta de lechuga (300g aprox).</li>
+            <li>200g de queso parmesano.</li>
+            <li>150g de pan tostado.</li>
+            <li>Salsa caesar la cantidad que quieras.</li>
+        </ul>
+        <h3 class="receta_subtitulo">Preparación:</h3>
+        <ol class="pasos">
+            <li>Cortamos en cubos la pechuga, salpimentamos y la cocinamos a la plancha, reservamos.</li>
+            <li>Lavamos la lechuga, podés utilizar la variedad que te guste, pero si querés hacer la más típica usa lechuga romana. La secamos y picamos finamente.</li>
+            <li>Ponemos en la fuente o plato la lechuga, encima la pechuga, unos trocitos de pan y otros trocitos de queso parmesano.</li>
+            <li>Incorporamos un poco de salsa caesar (comprada o hecha en casa), mezclamos y rallamos por encima más queso.</li>
+        </ol>
+    </div>
+
+    <div id="merluza_papa" class="receta">
+        <h1 class="receta_titulo">Merluza con papas</h1>
+        <h3 class="receta_subtitulo">Ingredientes:</h3>
+        <h5 class="receta_subtitulo2">Para 2 personas</h5>
+        <ul class="ingredientes">
+            <li>4 filetes de merluza</li>
+            <li>2 papas</li>
+            <li>1 cebolla</li>
+            <li>200 ml de crema de leche cocinar</li>
+            <li>Pimienta negra molida, sal, aceite de oliva y perejil fresco (opcional)</li>
+        </ul>
+        <h3 class="receta_subtitulo">Preparación:</h3>
+        <ol class="pasos">
+            <li>Precalentar el horno a 200º C y engrasar una fuente con un poco de aceite.</li>
+            <li>Lavar y pelar las patatas. Cortar en rodajas finitas, de menos de medio centímetro de grosor. Lo mismo con la cebolla.</li>
+            <li>Cortar la merluza en al tamaño que te guste.</li>
+            <li>Cubrir el fondo de la fuente con una capa de patatas.
+                Salpimentar y distribuir encima 3/4 de la cebolla. Colocar la merluza, salpimentar y cubrir con el resto de la cebolla.
+                Terminar con una capa de patatas.</li>
+            <li>Cubrir con la crema colocar en la parte baja del horno.</li>
+            <li>Hornear durante unos 55-60 minutos, bajando la temperatura a 180º C pasados 10 minutos.</li>
+            <li>Servir con un golpe más de pimienta negra recién molida y perejil fresco picado.</li>
+        </ol>
+    </div>
+
+    <div id="zucchini_queso_jamon" class="receta">
+        <h1 class="receta_titulo">Zucchini con queso y jamón</h1>
+        <h3 class="receta_subtitulo">Ingredientes:</h3>
+        <h5 class="receta_subtitulo2">Para 2 personas</h5>
+        <ul class="ingredientes">
+            <li>1 Zucchini grande o 2 pequeños</li>
+            <li>100 g de queso</li>
+            <li>50 g de jamón cocido picado</li>
+            <li>Tomillo (opcional y al gusto).</li>
+        </ul>
+        <h3 class="receta_subtitulo">Preparación:</h3>
+        <ol class="pasos">
+            <li>Lavamos bien el zucchini y lo cortarmos en rodajas de medio centímetro de espesor.</li>
+            <li>Lo cocinamos a la plancha hasta que esté dorado por ambas caras.</li>
+            <li>Procuramos que el zucchini cubra todo el fondo de la plancha y luego cubrimos con queso rallado al gusto.</li>
+            <li>Dejamos que el queso comience a fundirse con el calor.</li>
+            <li>Agregamos el jamón muy picado y luego el tomillo fresco, opcional.</li>
+            <li>Servir bien caliente.</li>
+        </ol>
+    </div> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="script2.js"></script>
+
+</body>
+</html>

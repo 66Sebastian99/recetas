@@ -1,0 +1,36 @@
+.receta{
+    display: flex;
+    flex-flow: wrap column;
+    max-width: 50rem;
+    margin: 1.5rem 20% 1rem 20%;
+    padding: 1rem 1rem;
+    background-color: antiquewhite;
+    box-shadow: 10px 14px 17px 6px rgba(40,30,9,0.46);
+    -webkit-box-shadow: 10px 14px 17px 6px rgba(40,30,9,0.46);
+    -moz-box-shadow: 10px 14px 17px 6px rgba(40,30,9,0.46);
+    box-shadow: 10px 14px 17px 6px rgba(40,30,9,0.46);
+}
+
+.encabezado_receta{
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-between;
+}
+
+.btn-fav{
+    width: 30px;
+    height: 30px;
+    border: 0.1em solid #faebd7;
+    border-radius: 1.5em;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: white;
+    background-color:#faebd7;
+    text-align: center;
+    transition: all 0.2s;
+    align-self: flex-end;
+    &:hover{
+        color:white;
+        background-color: rgb(214, 55, 55);
+    }
+}

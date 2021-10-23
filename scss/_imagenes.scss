@@ -1,0 +1,91 @@
+$vegetales: ajo, berenjena, brocoli, calabaza, cebolla, cherry, hongo, lechuga, morron, papa, pepino, tomate, zanahoria, zucchini;
+
+$carnes: cerdo, pescado, pollo, vaca;
+
+@mixin iconos{
+    background-color: black;
+    background-size: 100px 130px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 134px;  
+    width: 104px;
+}
+
+@each $veg in $vegetales{
+    .vegetal_#{$veg}{
+        @include iconos;
+   }
+}
+
+@each $carn in $carnes{
+    .carne_#{$carn}{
+        @include iconos;
+   }
+}
+
+
+.vegetal_ajo{
+    background-image: url(../media/vegeico/ajo.png);
+}
+.vegetal_berenjena{
+    background-image: url(../media/vegeico/berenjena.png);
+}
+.vegetal_brocoli{
+    background-image: url(../media/vegeico/brocoli.png);
+}
+.vegetal_calabaza{
+    background-image: url(../media/vegeico/calabaza.png);
+}
+.vegetal_cebolla{
+    background-image: url(../media/vegeico/cebolla.png);
+}
+.vegetal_cherry{
+    background-image: url(../media/vegeico/cherry.png);
+}
+.vegetal_hongo{
+    background-image: url(../media/vegeico/hongo.png);
+}
+.vegetal_lechuga{
+    background-image: url(../media/vegeico/lechuga.png);
+}
+.vegetal_morron{
+    background-image: url(../media/vegeico/morron.png);
+}
+.vegetal_papa{
+    background-image: url(../media/vegeico/papa.png);
+}
+.vegetal_pepino{
+    background-image: url(../media/vegeico/pepino.png);
+}
+.vegetal_tomate{
+    background-image: url(../media/vegeico/tomate.png);
+}
+.vegetal_zanahoria{
+    background-image: url(../media/vegeico/zanahoria.png);
+}
+.vegetal_zucchini{
+    background-image: url(../media/vegeico/zuccini.png);
+}
+
+.carne_cerdo{
+    background-image: url(../media/carneico/cerdob.png);        
+}
+.carne_pescado{
+    background-image: url(../media/carneico/pescadob.png);    
+}
+.carne_pollo{
+    background-image: url(../media/carneico/pollob.png);
+}
+.carne_vaca{
+    background-image: url(../media/carneico/vacab.png);
+}
+
+.vegetal{
+    height: 140px;  
+    width: 110px;
+}
+
+.carne{
+    height: 140px;  
+    width: 110px;
+}
