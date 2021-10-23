@@ -12,10 +12,10 @@ $("#contact-submit").click(() => {
     }
 
     $.post(URLPOST, infoPost ,(respuesta, estado) => {
+        console.log(estado);
+        console.log(respueta);
         if(estado === "success"){
             $("body").append(`<div>Guardado:${respuesta.infoPost.nombre}</div>`);
         }  
-    console.log(estado);
-    console.log(respueta);
     });
 });
