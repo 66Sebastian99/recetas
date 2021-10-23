@@ -3,26 +3,21 @@ const ingredientes = [
   "Carne",
   "Pescado",
   "Pollo",
-  "Queso",
-  "Muzzarella",
-  "Harina",
-  "Levadura",
-  "Huevos",
-  "Zapallito",
-  "Berenjena",
-  "Tomillo",
-  "Perejil",
-  "Genjibre",
-  "Morrón",
-  "Zanahoria",
-  "Lechuga",
-  "Tomate",
-  "Zapallo",
-  "Acelga",
+  "Brócoli",
+  "Calabaza",
   "Cebolla",
-  "Ajo",
+  "Lechuga",
+  "Palta",
   "Papa",
-  "Orégano",
+  "Porotos",
+  "Tomate",
+  "Zanahoria",
+  "Crema",
+  "Huevo",
+  "Queso",
+  "Pan",
+  "Tapas",
+  "Orégano"
 ];
 
 //array de objetos receta
@@ -42,6 +37,21 @@ const recetas = [
     ingredientes: ["Papas", "Pescado", "Cebolla", "Orégano" ,"Crema"],
     pasos: ["Precalentar el horno a 200ºC y engrasar una fuente con un poco de aceite.", "Lavar y pelar las patatas. Cortar en rodajas finitas, de menos de medio centímetro de grosor. Lo mismo con la cebolla.", "Cortar la merluza en al tamaño que te guste.", "Cubrir el fondo de la fuente con una capa de patatas.", "Salpimentar y distribuir encima 3/4 de la cebolla. Colocar la merluza, salpimentar y cubrir con el resto de la cebolla.", "Terminar con una capa de patatas.", "Cubrir con la crema colocar y en la parte baja del horno.", "Hornear durante unos 55-60 minutos, bajando la temperatura a 180º C pasados 10 minutos.", "Servir con un golpe más de pimienta negra recién molida y perejil fresco picado."]
   },
+  {
+    nombre:"Arrolladitos con palta",
+    ingredientes: ["Tapas", "Lechuga", "Tomate", "Cebolla", "Palta","Queso"],
+    pasos:["Pelar la palta y cortarla en cubitos. Rociar con jugo de limón.", "Cortar también los tomates y picar la cebolla.", "Estirar las tapas de empanadas para que queden finitas. En una sartén con un poquito de aceite o rocío vegetal, cocinarlas hasta que estén doradas. Acomodarlas sobre una plato, untarlas con queso blanco y colocar las hojas de lechuga, los tomates, la cebolla y la palta.","Enrollar y servir."]
+  },
+  {
+    nombre: "Guiso Vegetariano",
+    ingredientes:["Porotos","Cebolla","Zanahoria", "Calabaza", "Papa", "Caldo"],
+    pasos:["La noche anterior, dejar los porotos en remojo. Al día siguiente, colarlos y hervirlos en abundante agua por unos 20 minutos.", "Aparte, rehogar la cebolla con un poco de aceite. Agregar las verduras cortadas en cubos más los porotos y cubrir todo con el caldo.","Cocinar, revolviendo de vez en cuando. De ser necesario, agregar un poco mÍ¡s de caldo para que la Preparación no se seque."]
+  },
+  {
+    nombre: "Tarta de Brócoli",
+    ingredientes:["Harina","Huevo","Brócoli", "Queso","Cebolla"],
+    pasos:["Mezclar la harina con el huevo, el aceite y el agua y amasar.", "Estirar la masa sobre una bandeja para horno enmantecada o con un chorrito de aceite.", "Hornear para pre cocinar la base.", "Hervir el brócoli. Picar y dorar las cebollas y agregarles el brócoli.", "Mezclar los vegetales con los huevos, condimentar y cubrir la masa.", "Espolvorear con queso rallado y llevar a horno hasta que el relleno y la masa estén cocidos."]
+  }
 ];
 
 
