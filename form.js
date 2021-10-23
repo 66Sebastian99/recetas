@@ -10,11 +10,11 @@ $("#contact-submit").click(() => {
         celu: document.getElementById("celu").value,
         mensaje: document.getElementById("mensaje").value,
     }
-    
+
     $.post(URLPOST, infoPost ,(respuesta, estado) => {
         if(estado === "success"){
             $("body").append(`<div>
-Guardado:${respuesta.nombre}
+Guardado:${respuesta.infoPost.nombre}
 </div>`);
         }  
     });
