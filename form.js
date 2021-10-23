@@ -8,12 +8,11 @@ $("#contact-submit").click(() => {
         nombre: document.getElementById("nombre").value,
         email: document.getElementById("email").value,
         celu: document.getElementById("celu").value,
-        mensaje: document.getElementById("mensaje").value,
+        mensaje: document.getElementById("msj").value,
     }
-
+    console.log(estado);
+    console.log(respuesta);
     $.post(URLPOST, infoPost ,(respuesta, estado) => {
-        console.log(estado);
-        console.log(respueta);
         if(estado === "success"){
             $("body").append(`<div>Guardado:${respuesta.infoPost.nombre}</div>`);
         }  
