@@ -15,10 +15,22 @@
             <h1 class="tituloHead"><a href="#">Encontrá tu receta</a></h1>
             <nav>
                 <a href="#">Inicio</a>
-                <a href="#">¿Como funciona?</a>
+                <a href="pages/contacto.html">Sugerencias</a>
             </nav>
         </div>
     </header>
+
+        <input id="nombre" />
+        <input id="password" />
+        <button id="btn-login">Login</button>
+
+    <!-- <form id="formulario" class="formulario" action="">
+        <label>Email:</label>
+        <input id="nombre" class="campoForm" type="text" name="nombre">
+        <label>Contraseña:</label>
+        <input id="Password" class="campoForm" type="text" name="password">
+        <input type="submit" value="save">
+      </form> -->
 
     <div>
         <h2 class="titulo_principal">¿Qué vamos a cocinar?<h2>
@@ -27,6 +39,10 @@
     <div class="instrucciones">
         <p>Presioná <span>Comenzar</span> y elegí los ingredientes que vas a queres usar en la receta.</p>
         <p>Automáticamente vas ver las recetas compatibles con esos ingredientes.</p>
+    </div>
+
+    <div>
+        <button id="btn-login" class="boton_principal btn-log">Login</button>
     </div>
 
     <div class="boton_comenzar">
@@ -41,11 +57,13 @@
         <div id="resultados"></div>
         
     </div>
+
     <div id="recetadinamica">
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <script src="script2.js"></script>
+    <script src="login.js"></script>
 
 </body>
 </html>

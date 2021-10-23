@@ -128,15 +128,16 @@ function binds() {
   $("#busqueda").on("click", ".btn-fav", (event) => {
     const receta = $(event.target).data('receta');
     console.log('receta',receta);
-
     const fav = localStorage.getItem(receta);
 
     if (fav) {
       localStorage.removeItem(receta);
       $(event.target).text('🖤')
+
     } else{
       localStorage.setItem(receta, '1');
       $(event.target).text('💖')
+
     }
  
   });
