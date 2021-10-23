@@ -240,39 +240,6 @@ body {
   margin-bottom: 1rem;
 }
 
-#cajones {
-  display: none;
-}
-
-#vege_caja {
-  display: none;
-}
-
-#carne_caja {
-  display: none;
-}
-
-.cajon {
-  height: 134px;
-  width: 104px;
-  padding: 0.35em 1.2em;
-  border: 0.1em solid #e37305;
-  margin: 0.3em;
-  border-radius: 0.12em;
-}
-
-.cajon_flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
 .btn-ingrediente {
   width: 130px;
   height: auto;
@@ -311,50 +278,6 @@ body {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-}
-
-.cajon_vegetales {
-  background-image: url(../media/vegeico/cajonvegetal.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 104px;
-  -webkit-box-shadow: 12px 12px 8px 2px rgba(119, 66, 13, 0.56);
-  box-shadow: 12px 12px 8px 2px rgba(119, 66, 13, 0.56);
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-.cajon_vegetales:hover {
-  cursor: pointer;
-  -webkit-transform: translateY(-8px);
-          transform: translateY(-8px);
-}
-
-.cajon_vegetales:active {
-  -webkit-transform: translateY(4px);
-          transform: translateY(4px);
-}
-
-.cajon_carnes {
-  background-image: url(../media/carneico/cajoncarne.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 104px;
-  -webkit-box-shadow: 12px 12px 8px 2px rgba(119, 66, 13, 0.56);
-  box-shadow: 12px 12px 8px 2px rgba(119, 66, 13, 0.56);
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-.cajon_carnes:hover {
-  cursor: pointer;
-  -webkit-transform: translateY(-8px);
-          transform: translateY(-8px);
-}
-
-.cajon_carnes:active {
-  -webkit-transform: translateY(4px);
-          transform: translateY(4px);
 }
 
 .boton_principal {
