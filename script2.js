@@ -1,3 +1,4 @@
+//array de ingredientes
 const ingredientes = [
   "Carne",
   "Pescado",
@@ -24,6 +25,7 @@ const ingredientes = [
   "Orégano",
 ];
 
+//array de objetos receta
 const recetas = [
   {
     nombre: "Carne al horno",
@@ -42,12 +44,15 @@ const recetas = [
   },
 ];
 
+
 function buscarRecetaNombre(valor) {
   return recetas.filter(
     (f) => f.nombre.toLowerCase().search(valor.toLowerCase()) !== -1
   );
 }
 
+
+//Funcion que busca si alguna o algunas de las recetas cumple con el ingrediente indicado
 function buscarRecetaIngrediente(valor) {
   return recetas.filter((receta) => {
     return receta.ingredientes.some(
@@ -56,6 +61,7 @@ function buscarRecetaIngrediente(valor) {
   });
 }
 
+//Funcion para armar el listado de ingredientes disponibles
 function comenzarBusqueda() {
   console.log("comenzar busqueda");
   document.getElementById("busqueda").style.display = "flex";
@@ -71,6 +77,7 @@ function comenzarBusqueda() {
   divIngredientes.innerHTML = htmlIngredientes.join("");
 }
 
+//Funcion para mostrar en pantalla las recetas que se encuentren
 function renderRecetas(recetas) {
   const html = recetas.map((receta) => {
     const ingredientes = receta.ingredientes
@@ -80,9 +87,9 @@ function renderRecetas(recetas) {
     const pasos = receta.pasos
       .map((paso) => `<li>${paso}</li>`)
       .join("");
-
+    //traigo del storage si las recetas ya estan en favs
     const fav = localStorage.getItem(receta.nombre);
-
+    //pregunto si estan en el storage
     const iconoFav = fav ? '💖' : '🖤' ;
 
     return `<div class="receta">
@@ -106,6 +113,7 @@ function renderRecetas(recetas) {
   $("#resultados").html(html);
 }
 
+// Funcion que realiza la busqueda de las recetas
 function botonBusqueda(event) {
   const ingrediente = event.target.innerText;
 
@@ -118,13 +126,15 @@ function botonBusqueda(event) {
   renderRecetas(recetas);
 }
 
+
+//funcion que le da la funcionalidad a los botones creados
 function binds() {
   $("#comenzar2").click(comenzarBusqueda);
 
   $("#busqueda").on("click", ".btn-ingrediente", (event) => {
     botonBusqueda(event);
   });
-
+  // Cambio dinamico del icono de favorito y no favorito
   $("#busqueda").on("click", ".btn-fav", (event) => {
     const receta = $(event.target).data('receta');
     console.log('receta',receta);

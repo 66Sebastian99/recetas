@@ -1,3 +1,5 @@
+
+//Usuarios Hardcodeados
 usuarios = [
     {
         nombre: "sebastian",
@@ -13,6 +15,7 @@ usuarios = [
     }
 ];
 
+//Funcion para buscar los usuario en el array
 function login (nombre, password) {
     const usuario  = usuarios.find(usuario => usuario.nombre === nombre && usuario.password === password);
 
@@ -24,6 +27,8 @@ function login (nombre, password) {
     }
 };
 
+
+//Evento  que toma los valores que ingresé el usuario y los valida para loguear o no
 $('#btn-login').click(event => {
     //guardo en variables los datos del form
     let nombre = document.getElementById('nombre').value;
